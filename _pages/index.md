@@ -7,14 +7,49 @@ permalink: /
 
 # Welcome! 🌱
 
-<p style="padding: 3em 1em; background: #f5f7ff; border-radius: 4px;">
-  Take a look at <span style="font-weight: bold">[[Your first note]]</span> to get started on your exploration.
-</p>
+Надо заполнить
 
-This digital garden template is free, open-source, and [available on GitHub here](https://github.com/maximevaillancourt/digital-garden-jekyll-template).
+**Предметы**
 
-The easiest way to get started is to read this [step-by-step guide explaining how to set this up from scratch](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll).
+<ul>
+    <li>
+        04
+        <ul>
+            <li>
+              <a class="internal-link" href="{% link _notes/04/PH.md %}">
+                  Философия
+              </a>
+            </li>
+            <li>
+              <a class="internal-link" href="{% link _notes/04/OS.md %}"> 
+                  Операционные системы
+              </a>
+              
+              <!--<a class="internal-link" href="{{ site.baseurl }}{{ Электротехника }}">Электротехника</a>-->
+            </li>
+        </ul>
+    </li>
 
+    <li>
+        03
+        <ul>
+            <li>
+              <a class="internal-link" href="{% link _notes/03/ET.md %}">
+                  Электротехника
+              </a>
+            </li>
+            <li>
+              <a class="internal-link" href="{% link _notes/03/ML.md %}"> 
+                  Математическая логика и теория алгоритмов 
+              </a>
+              
+              <!--<a class="internal-link" href="{{ site.baseurl }}{{ Электротехника }}">Электротехника</a>-->
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<!--
 <strong>Recently updated notes</strong>
 
 <ul>
@@ -25,6 +60,7 @@ The easiest way to get started is to read this [step-by-step guide explaining ho
     </li>
   {% endfor %}
 </ul>
+-->
 
 <style>
   .wrapper {
