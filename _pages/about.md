@@ -4,6 +4,5 @@ title: About
 permalink: /about
 ---
 
-*This is an about page.*
-
-Надо заполнить
+# NOTICE
+Thank you for noticing this notice

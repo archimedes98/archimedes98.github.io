@@ -5,49 +5,27 @@ id: home
 permalink: /
 ---
 
-# Welcome! 🌱
+<img width="40%" src="{{ site.baseurl }}/assets/cover.jpg"/>
 
-Надо заполнить
 
-**Предметы**
+{% for i in (3..4) reversed %}
 
-<ul>
-    <li>
-        04
-        <ul>
-            <li>
-              <a class="internal-link" href="{% link _notes/04/PH.md %}">
-                  Философия
-              </a>
-            </li>
-            <li>
-              <a class="internal-link" href="{% link _notes/04/OS.md %}"> 
-                  Операционные системы
-              </a>
-              
-              <!--<a class="internal-link" href="{{ site.baseurl }}{{ Электротехника }}">Электротехника</a>-->
-            </li>
-        </ul>
-    </li>
+  <h1>{{ i }} семестр</h1>
+  <ul>
+    {% for note in site.notes %}
+      {% assign ipad = i | prepend: '000' | slice: -2, 2 | prepend: '/' | append: '/' %}
+      {% if note.category == 'subject' and note.path contains ipad %}
+      <li>
+        <a class="internal-link" href="{{ note.url }}">
+          {{ note.title }}
+        </a>
+      </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endfor %}
 
-    <li>
-        03
-        <ul>
-            <li>
-              <a class="internal-link" href="{% link _notes/03/ET.md %}">
-                  Электротехника
-              </a>
-            </li>
-            <li>
-              <a class="internal-link" href="{% link _notes/03/ML.md %}"> 
-                  Математическая логика и теория алгоритмов 
-              </a>
-              
-              <!--<a class="internal-link" href="{{ site.baseurl }}{{ Электротехника }}">Электротехника</a>-->
-            </li>
-        </ul>
-    </li>
-</ul>
+{% comment %}
 
 <!--
 <strong>Recently updated notes</strong>
@@ -62,6 +40,7 @@ permalink: /
 </ul>
 -->
 
+{% endcomment %}
 <style>
   .wrapper {
     max-width: 46em;
